@@ -15,8 +15,8 @@
     background: hsl(0, 0%, 98%);
     color: hsl(234, 12%, 34%); 
     height: 100%;
-    width: 100%;
-    padding: 1rem;
+    width: 100%; 
+    padding-bottom: 23%;
 }
 
 .container .header 
@@ -49,7 +49,7 @@
 {
     margin: 0 auto;
     text-align: center;   
-    width: 37%; 
+    width: 31rem; 
     color: hsl(229, 6%, 66%);
     font-size: 1rem;
     padding: 0.7rem; 
@@ -58,7 +58,8 @@
 
 .container .content 
 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     position: relative;
     flex-direction: row;
     justify-content: center;
@@ -73,11 +74,17 @@
     display: inline-block;
     background: #fff;
     padding: 1.5rem;
-    width: 35%;
+    width: 90%;
     border-radius: 5px;
-    box-shadow: 0 7px 36px 0px rgba(0,5,8,0.1), 0px -3px hsl(0, 78%, 62%);
 }
 
+.container .content div 
+{    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .container .content article h3 
 {
@@ -100,26 +107,68 @@
     margin: 16px 64% 0; 
 }
 
+.container .content .sup
+{
+    box-shadow: 0 7px 36px 0px rgba(0,5,8,0.1), 0px -3px hsl(180, 62%, 55%);
+    margin: 146px 10%;
+}
+
+.container .content .team
+{
+    box-shadow: 0 7px 36px 0px rgba(0,5,8,0.1), 0px -3px hsl(0, 78%, 62%);
+}
+
+.container .content .kar
+{
+    box-shadow: 0 7px 36px 0px rgba(0,5,8,0.1), 0px -3px hsl(34, 97%, 64%);
+}
+
+.container .content .cal
+{
+    box-shadow: 0 7px 36px 0px rgba(0,5,8,0.1), 0px -3px hsl(212, 86%, 64%);
+    margin: 146px 0;
+}
+
 
 
 @media (max-width: 991px)
 {
+
+    .container .header h1,
+    .container .header h2 
+    {
+        font-size: 1.5rem;
+    }
+
     .container .content 
     {
         display: flex;
         flex-direction: column;
     }
 
-    .container .header p 
-    {
-        width: 99%;
-    }
-
     .container .content article 
     {
         width: 24rem; 
+        margin: 1rem auto;
+    } 
+
+    .container .content .sup, 
+    .container .content .cal
+    {
+        margin: 1rem auto;
     }
 }
+
+
+@media (max-width: 610px) 
+{
+    .container .header p 
+    {
+        width: 90%;
+    }
+
+}
+
 
 @media (max-width: 410px) 
 {
@@ -127,4 +176,5 @@
     {
         width: 90%;
     }
+
 }
